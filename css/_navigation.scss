@@ -1,0 +1,66 @@
+@import 'utilities';
+// NAV ==========
+
+ /* Place the navbar at the bottom of the page, and make it stick */
+ .navbar {
+    background-color: #000;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    // margin: 0 -2rem;
+    z-index: 100;
+    a { /* Style the links inside the navigation bar */
+      float: left;
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    /* Change the color of links on hover */
+    a:hover:not(.social-icon-behance):not(.social-icon-linked):not(.social-icon-insta),
+    a:focus:not(.social-icon-behance):not(.social-icon-linked):not(.social-icon-insta) {
+      background-color: #fff;
+      color: $dblue;
+    }
+    /* Add a background color to the active link */
+    a.active {
+      background-color: $orange;
+      color: #fff;
+    }
+    /* Hide the link that should open and close the navbar on small screens */
+    .icon {
+      display: none;
+    } 
+  }
+
+  .social-icon-behance {
+    background-image: url(../img/icons/behance-square.svg);
+    background-repeat: no-repeat;
+    height: 1rem;
+    margin: 14px 16px;
+    &:hover {
+      background-image: url(../img/icons/behance-square-black.svg);
+    }
+  }
+  .social-icon-linked {
+    background-image: url(../img/icons/linkedin.svg);
+    background-repeat: no-repeat;
+    height: 1rem;
+    margin: 14px 16px;
+    &:hover {
+      background-image: url(../img/icons/linkedin-black.svg);
+    }
+  }
+  .social-icon-insta {
+    background-image: url(../img/icons/instagram.svg);
+    background-repeat: no-repeat;
+    height: 1rem;
+    margin: 14px 16px;
+    &:hover {
+      background-image: url(../img/icons/instagram-black.svg);
+    }
+  }

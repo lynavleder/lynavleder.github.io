@@ -1,0 +1,923 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Nunito+Sans:400,700,900&display=swap");
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+ Helper classes
+ ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+*:before,
+*:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+img {
+    page-break-inside: avoid;
+  }
+
+  p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+h3 {
+    page-break-after: avoid;
+  }
+}
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 6.6111111rem;
+  line-height: 6.5rem;
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+}
+
+h3 {
+  font-size: 1.8888889;
+  line-height: 3rem;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  margin: 1.2rem 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.subtitle {
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  padding-top: 50px;
+  text-align: left;
+}
+
+.label-text {
+  color: #fff;
+  cursor: text;
+  font-size: 1rem;
+  line-height: 20px;
+  transform: translateY(-34px);
+  transition: all 0.3s;
+}
+
+input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: left;
+  transition: all 0.3s;
+  width: 80%;
+}
+input:focus {
+  max-width: 100%;
+  width: 90%;
+}
+input:focus + .label-text {
+  color: #fff;
+  font-size: 0.8rem;
+  transform: translateY(-65px);
+}
+input:valid + .label-text {
+  font-size: 0.8rem;
+  transform: translateY(-65px);
+}
+
+.submit-button {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+.submit-button:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: black;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-color: gray;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  transition: all 0.5s;
+}
+.portfolio-card:hover {
+  transform: scale(1.05);
+}
+.portfolio-card a {
+  width: 100%;
+  height: 200px;
+  background-color: gray;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.project-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+h2 {
+  background-size: 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s;
+  background-position: 0s step-end 0.5s;
+}
+
+#card-01 {
+  background-image: url(../img/xs/graphics-xs.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#card-02 {
+  background-image: url(../img/xs/code-xs.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+  #card-01 {
+    background-image: url(../img/sm/graphics-sm.png);
+    background-size: cover;
+  }
+
+  #card-02 {
+    background-image: url(../img/sm/code-sm.png);
+    background-size: cover;
+  }
+
+  #border-portfolio {
+    height: 14rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #card-01 {
+    background-image: url(../img/md/graphics-md.png);
+    background-size: cover;
+  }
+
+  #card-02 {
+    background-image: url(../img/md/code-md.png);
+    background-size: cover;
+  }
+
+  #border-portfolio {
+    height: 14rem;
+  }
+
+  .card-wrapper.portfolio-wrapper {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #card-01 {
+    background-image: url(../img/lg/graphics-lg.png);
+    background-size: cover;
+  }
+
+  #card-02 {
+    background-image: url(../img/lg/code-lg.png);
+    background-size: cover;
+  }
+}
+h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 6.6111111rem;
+  line-height: 6.5rem;
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+}
+
+h3 {
+  font-size: 1.8888889;
+  line-height: 3rem;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  margin: 1.2rem 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.subtitle {
+  color: #000;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #000;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* Change the color of links on hover */
+  /* Add a background color to the active link */
+  /* Hide the link that should open and close the navbar on small screens */
+}
+.navbar a {
+  /* Style the links inside the navigation bar */
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover:not(.social-icon-behance):not(.social-icon-linked):not(.social-icon-insta),
+.navbar a:focus:not(.social-icon-behance):not(.social-icon-linked):not(.social-icon-insta) {
+  background-color: #fff;
+  color: #1b365d;
+}
+.navbar a.active {
+  background-color: #ef6534;
+  color: #fff;
+}
+.navbar .icon {
+  display: none;
+}
+
+.social-icon-behance {
+  background-image: url(../img/icons/behance-square.svg);
+  background-repeat: no-repeat;
+  height: 1rem;
+  margin: 14px 16px;
+}
+.social-icon-behance:hover {
+  background-image: url(../img/icons/behance-square-black.svg);
+}
+
+.social-icon-linked {
+  background-image: url(../img/icons/linkedin.svg);
+  background-repeat: no-repeat;
+  height: 1rem;
+  margin: 14px 16px;
+}
+.social-icon-linked:hover {
+  background-image: url(../img/icons/linkedin-black.svg);
+}
+
+.social-icon-insta {
+  background-image: url(../img/icons/instagram.svg);
+  background-repeat: no-repeat;
+  height: 1rem;
+  margin: 14px 16px;
+}
+.social-icon-insta:hover {
+  background-image: url(../img/icons/instagram-black.svg);
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+
+  body:not(.navbar) {
+    max-width: 311px;
+    margin: 0 auto;
+  }
+}
+/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+#graphics-card-01 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#graphics-card-02 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#graphics-card-03 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#graphics-card-04 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#graphics-card-05 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#web-card-01 {
+  background-image: url(../img/bacteria-tree.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#web-card-02 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#web-card-03 {
+  background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body:not(.navbar):not(.footer-bottom) {
+  font-family: "Merriweather", serif;
+  font-weight: normal;
+  color: #333;
+  background-color: #fff;
+  margin: 0 auto;
+  min-width: 330px;
+}
+
+.button {
+  background-color: #fff;
+  border: 2px #000 solid;
+  color: #000;
+  padding: 0.75rem;
+  width: 30%;
+  margin-left: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #000;
+  color: #f2f2f2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+a.button, #myNavbar, .submit-button {
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+#myNavbar > a > img {
+  color: #fff;
+  width: 10%;
+}
+
+#title-01 {
+  color: #006ba6;
+}
+
+#title-02 {
+  color: #1b365d;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+}
+.header-box a {
+  background-color: #fff;
+  border: 2px #000 solid;
+  color: #000;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  height: 1rem;
+  line-height: 1rem;
+}
+.header-box a:hover {
+  color: #fff;
+  background-color: #000;
+  transition: all 0.3s;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  margin: 2rem auto;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.info-card p {
+  padding: 1.5rem;
+}
+.info-card button {
+  width: 40%;
+  margin-left: 50%;
+}
+
+.header-border {
+  border: 2px solid black;
+  width: 100%;
+  height: 13rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.square-header {
+  background-color: #fff;
+  position: absolute;
+  top: -18%;
+  left: 1rem;
+  padding: 0 1rem;
+  display: inline;
+  -webkit-transition: background-size 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s, background-position 0s step-end 0.5s;
+  transition: background-size 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s, background-position 0s step-end 0.5s;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, transparent), color-stop(90%, black), to(black));
+  background-image: linear-gradient(transparent 90%, black 90%, black 100%);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 0% 100%;
+}
+.square-header:hover {
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 100% 100%;
+}
+
+.bg {
+  background-image: url(../img/pattern/funky-lines.png);
+  background-repeat: repeat;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  opacity: 0.5;
+}
+
+h3 {
+  line-height: 0.5;
+  text-align: left;
+}
+h3 .h3-line {
+  display: inline-block;
+  position: relative;
+}
+h3 .h3-line:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 2px solid black;
+  top: -10px;
+  width: 25vw;
+  left: 100%;
+  margin-left: 15px;
+}
+
+.divider {
+  width: 80%;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+}
+
+footer {
+  color: #fff;
+  background-color: #222;
+  margin-bottom: 10rem;
+  width: 100%;
+}
+footer form {
+  width: 100%;
+}
+footer form form > label > input {
+  width: 100%;
+}
+footer form input .submit-button {
+  align-self: flex-end;
+  width: 100%;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+@media screen and (max-width: 640px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+
+  body:not(.navbar) {
+    max-width: 411px;
+    margin: 0 auto;
+  }
+}
+/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 640px) {
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 640px) {
+  .card-wrapper {
+    height: 13rem;
+  }
+
+  .header-border {
+    height: 14rem;
+  }
+
+  .square-header {
+    top: -17%;
+  }
+
+  .bg {
+    top: 10%;
+    left: 5%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-wrapper {
+    width: 60%;
+    margin: 2rem;
+    margin-top: 4rem;
+    height: 16rem;
+  }
+
+  .square-header {
+    top: -13%;
+  }
+
+  .header-border {
+    height: 16rem;
+  }
+
+  .divider {
+    margin: 0;
+    max-width: 556px;
+  }
+
+  .card-wrapper.contact-wrapper {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  a.button {
+    margin-top: 2rem;
+    margin-left: 55%;
+  }
+
+  footer form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body:not(.navbar) {
+    max-width: 80vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .card-wrapper {
+    height: 16rem;
+    margin: 2rem;
+  }
+  .card-wrapper:nth-of-type(3) {
+    margin: 2rem;
+  }
+
+  .header-border {
+    height: 15rem;
+  }
+
+  .info-card p {
+    padding: 1rem 2rem;
+  }
+
+  .square-header {
+    top: -22%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
