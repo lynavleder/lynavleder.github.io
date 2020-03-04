@@ -251,9 +251,12 @@ h1 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
   font-size: 6.6111111rem;
   line-height: 6.5rem;
   word-wrap: break-word;
+  margin: 1rem 0;
+  margin-top: 3rem;
 }
 
 h2 {
@@ -284,6 +287,12 @@ p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.card-wrapper-about {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 50%;
 }
 
 form {
@@ -442,9 +451,12 @@ h1 {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
   font-size: 6.6111111rem;
   line-height: 6.5rem;
   word-wrap: break-word;
+  margin: 1rem 0;
+  margin-top: 3rem;
 }
 
 h2 {
@@ -513,34 +525,17 @@ p {
   display: none;
 }
 
-.social-icon-behance {
-  background-image: url(../img/icons/behance-square.svg);
-  background-repeat: no-repeat;
-  height: 1rem;
-  margin: 14px 16px;
+.social {
+  display: flex;
+  width: 40%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-.social-icon-behance:hover {
-  background-image: url(../img/icons/behance-square-black.svg);
-}
-
-.social-icon-linked {
-  background-image: url(../img/icons/linkedin.svg);
-  background-repeat: no-repeat;
-  height: 1rem;
-  margin: 14px 16px;
-}
-.social-icon-linked:hover {
-  background-image: url(../img/icons/linkedin-black.svg);
-}
-
-.social-icon-insta {
-  background-image: url(../img/icons/instagram.svg);
-  background-repeat: no-repeat;
-  height: 1rem;
-  margin: 14px 16px;
-}
-.social-icon-insta:hover {
-  background-image: url(../img/icons/instagram-black.svg);
+.social a {
+  width: 8%;
+  padding-right: 5%;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
@@ -658,6 +653,10 @@ a.button, #myNavbar, .submit-button {
   width: 10%;
 }
 
+body {
+  background-image: url(../img/pattern/memphis-colorful.png);
+}
+
 #title-01 {
   color: #006ba6;
 }
@@ -666,9 +665,22 @@ a.button, #myNavbar, .submit-button {
   color: #1b365d;
 }
 
+.content-wrapper {
+  background-color: white;
+  width: 50%;
+  padding: 1rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
 .header-box {
   display: flex;
   justify-content: space-between;
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 .header-box a {
   background-color: #fff;
@@ -684,6 +696,10 @@ a.button, #myNavbar, .submit-button {
   color: #fff;
   background-color: #000;
   transition: all 0.3s;
+}
+
+.header-box > a:nth-child(2) {
+  margin-right: -50%;
 }
 
 .card-wrapper {
@@ -829,94 +845,6 @@ footer form input .submit-button {
     float: none;
     display: block;
     text-align: left;
-  }
-}
-@media screen and (min-width: 640px) {
-  .card-wrapper {
-    height: 13rem;
-  }
-
-  .header-border {
-    height: 14rem;
-  }
-
-  .square-header {
-    top: -17%;
-  }
-
-  .bg {
-    top: 10%;
-    left: 5%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .card-wrapper {
-    width: 60%;
-    margin: 2rem;
-    margin-top: 4rem;
-    height: 16rem;
-  }
-
-  .square-header {
-    top: -13%;
-  }
-
-  .header-border {
-    height: 16rem;
-  }
-
-  .divider {
-    margin: 0;
-    max-width: 556px;
-  }
-
-  .card-wrapper.contact-wrapper {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
-  a.button {
-    margin-top: 2rem;
-    margin-left: 55%;
-  }
-
-  footer form {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-around;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body:not(.navbar) {
-    max-width: 80vw;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .card-wrapper {
-    height: 16rem;
-    margin: 2rem;
-  }
-  .card-wrapper:nth-of-type(3) {
-    margin: 2rem;
-  }
-
-  .header-border {
-    height: 15rem;
-  }
-
-  .info-card p {
-    padding: 1rem 2rem;
-  }
-
-  .square-header {
-    top: -22%;
   }
 }
 

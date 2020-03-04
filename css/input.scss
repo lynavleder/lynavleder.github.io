@@ -88,8 +88,8 @@ a.button, #myNavbar, .submit-button {
 }
 
 // BODY ==========
-h1 {
-  // max-width: 556px;
+body {
+  background-image: url(../img/pattern/memphis-colorful.png);
 }
 #title-01 {
   color: $lblue
@@ -97,10 +97,21 @@ h1 {
 #title-02 {
   color: $dblue;
 }
-
+.content-wrapper {
+  background-color: white;
+  width: 50%;
+  padding: 1rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
 .header-box {
   display: flex;
   justify-content: space-between;
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 2rem;
   a {
     background-color: #fff;
     border: 2px #000 solid;
@@ -116,6 +127,10 @@ h1 {
       transition: all 0.3s;
     }
   }
+}
+
+.header-box > a:nth-child(2) {
+  margin-right: -50%;
 }
 
 .card-wrapper {
@@ -267,86 +282,86 @@ footer {
     }
   } 
 
-  @media screen and (min-width:640px) {
-    .card-wrapper{
-      height: 13rem;
-    }
-    .header-border {
-      height: 14rem;
-    }
-    .square-header {
-      top: -17%;
-    }
-    .bg {
-      top: 10%;
-      left: 5%;
-    }
-  }  
+  // @media screen and (min-width:640px) {
+  //   .card-wrapper{
+  //     height: 13rem;
+  //   }
+  //   .header-border {
+  //     height: 14rem;
+  //   }
+  //   .square-header {
+  //     top: -17%;
+  //   }
+  //   .bg {
+  //     top: 10%;
+  //     left: 5%;
+  //   }
+  // }  
 
-  @media screen and (min-width:768px) {
-    .card-container {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    .card-wrapper {
-      width: 60%;
-      margin: 2rem;
-      margin-top: 4rem;
-      height: 16rem;
-    }
-    .square-header {
-      top: -13%;
-    }
-    .header-border {
-      height: 16rem;
-    }
-    .divider {
-      margin: 0;
-      max-width: 556px;
-    }
-    .card-wrapper {
-      &.contact-wrapper {
-        margin-left: 0;  
-        margin-bottom: 0;
-      }
-    }
-    a.button {
-      margin-top: 2rem;
-      margin-left: 55%;
-    }
-    footer form {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      align-content: space-around;
-    }
-  }  
+  // @media screen and (min-width:768px) {
+  //   .card-container {
+  //     display: flex;
+  //     flex-direction: row;
+  //     flex-wrap: wrap;
+  //   }
+  //   .card-wrapper {
+  //     width: 60%;
+  //     margin: 2rem;
+  //     margin-top: 4rem;
+  //     height: 16rem;
+  //   }
+  //   .square-header {
+  //     top: -13%;
+  //   }
+  //   .header-border {
+  //     height: 16rem;
+  //   }
+  //   .divider {
+  //     margin: 0;
+  //     max-width: 556px;
+  //   }
+  //   .card-wrapper {
+  //     &.contact-wrapper {
+  //       margin-left: 0;  
+  //       margin-bottom: 0;
+  //     }
+  //   }
+  //   a.button {
+  //     margin-top: 2rem;
+  //     margin-left: 55%;
+  //   }
+  //   footer form {
+  //     display: flex;
+  //     flex-flow: row wrap;
+  //     justify-content: space-between;
+  //     align-content: space-around;
+  //   }
+  // }  
 
-  @media screen and (min-width:1024px) {
-    body:not(.navbar){
-    max-width: 80vw;
-    }
-  }  
+  // @media screen and (min-width:1024px) {
+  //   body:not(.navbar){
+  //   max-width: 80vw;
+  //   }
+  // }  
 
-  @media screen and (min-width:1280px) {
-    // .card-wrapper:first-of-type{
-    //   flex-grow: 2;
-    // }
-    .card-wrapper {
-      height: 16rem;
-      margin: 2rem;
-      &:nth-of-type(3) {
-        margin: 2rem
-      }
-    }
-    .header-border {
-      height: 15rem;
-    }
-    .info-card p {
-      padding: 1rem 2rem;
-    }
-    .square-header {
-      top: -22%;
-    }
-  } 
+  // @media screen and (min-width:1280px) {
+  //   // .card-wrapper:first-of-type{
+  //   //   flex-grow: 2;
+  //   // }
+  //   .card-wrapper {
+  //     height: 16rem;
+  //     margin: 2rem;
+  //     &:nth-of-type(3) {
+  //       margin: 2rem
+  //     }
+  //   }
+  //   .header-border {
+  //     height: 15rem;
+  //   }
+  //   .info-card p {
+  //     padding: 1rem 2rem;
+  //   }
+  //   .square-header {
+  //     top: -22%;
+  //   }
+  // } 

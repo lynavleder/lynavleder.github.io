@@ -37,30 +37,43 @@
     } 
   }
 
-  .social-icon-behance {
-    background-image: url(../img/icons/behance-square.svg);
-    background-repeat: no-repeat;
-    height: 1rem;
-    margin: 14px 16px;
-    &:hover {
-      background-image: url(../img/icons/behance-square-black.svg);
+  .social {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    a {
+      width: 8%;
+      padding-right: 5%;
     }
   }
-  .social-icon-linked {
-    background-image: url(../img/icons/linkedin.svg);
-    background-repeat: no-repeat;
-    height: 1rem;
-    margin: 14px 16px;
-    &:hover {
-      background-image: url(../img/icons/linkedin-black.svg);
-    }
-  }
-  .social-icon-insta {
-    background-image: url(../img/icons/instagram.svg);
-    background-repeat: no-repeat;
-    height: 1rem;
-    margin: 14px 16px;
-    &:hover {
-      background-image: url(../img/icons/instagram-black.svg);
-    }
-  }
+
+  // .social-icon-behance {
+  //   background-image: url(../img/icons/behance-square-black.svg);
+  //   background-repeat: no-repeat;
+  //   height: 1rem;
+  //   margin: 14px 16px;
+  //   &:hover {
+  //     background-image: url(../img/icons/behance-square-black.svg);
+  //   }
+  // }
+  // .social-icon-linked {
+  //   background-image: url(../img/icons/linkedin-black.svg);
+  //   background-repeat: no-repeat;
+  //   height: 1rem;
+  //   margin: 14px 16px;
+  //   &:hover {
+  //     background-image: url(../img/icons/linkedin-black.svg);
+  //   }
+  // }
+  // .social-icon-insta {
+  //   background-image: url(../img/icons/instagram-black.svg);
+  //   background-repeat: no-repeat;
+  //   height: 1rem;
+  //   margin: 14px 16px;
+  //   &:hover {
+  //     background-image: url(../img/icons/instagram-black.svg);
+  //   }
+  // }
