@@ -7,9 +7,9 @@
     margin-bottom: 2rem;
     margin-top: .5rem;
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
     }
-    transition: all .5s;
+    transition: all .3s;
     a {
         width: 100%;
         height: 200px;
@@ -33,15 +33,40 @@ h2 {
     background-position: 0s step-end 0.5s;
 }
 
+.h3-portfolio {
+    position: absolute;
+    top: -20%;
+}
+
+.card-wrapper {
+    &.portfolio-wrapper {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.card-container-portfolio {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
 #card-01 {
     background-image: url(../img/xs/graphics-xs.png);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    margin-right: 2rem;
+    flex-grow: 2;
 }
 #card-02 {
     background-image: url(../img/xs/code-xs.png);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
 }
 
 // SWAP IMAGES
@@ -59,7 +84,10 @@ h2 {
     }
 }  
 
-@media screen and (min-width:768px) {
+@media screen and (max-width:768px) {
+    .card-container-portfolio {
+        flex-direction: column;
+    }
     #card-01 {
         background-image: url(../img/md/graphics-md.png);
         background-size: cover;
@@ -70,11 +98,6 @@ h2 {
     }
     #border-portfolio {
         height: 14rem;
-    }
-    .card-wrapper {
-        &.portfolio-wrapper {
-          margin-left: 0;  
-        }
     }
 }  
 
