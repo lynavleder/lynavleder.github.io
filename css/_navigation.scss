@@ -50,30 +50,30 @@
     }
   }
 
-  // .social-icon-behance {
-  //   background-image: url(../img/icons/behance-square-black.svg);
-  //   background-repeat: no-repeat;
-  //   height: 1rem;
-  //   margin: 14px 16px;
-  //   &:hover {
-  //     background-image: url(../img/icons/behance-square-black.svg);
-  //   }
-  // }
-  // .social-icon-linked {
-  //   background-image: url(../img/icons/linkedin-black.svg);
-  //   background-repeat: no-repeat;
-  //   height: 1rem;
-  //   margin: 14px 16px;
-  //   &:hover {
-  //     background-image: url(../img/icons/linkedin-black.svg);
-  //   }
-  // }
-  // .social-icon-insta {
-  //   background-image: url(../img/icons/instagram-black.svg);
-  //   background-repeat: no-repeat;
-  //   height: 1rem;
-  //   margin: 14px 16px;
-  //   &:hover {
-  //     background-image: url(../img/icons/instagram-black.svg);
-  //   }
-  // }
+  .social-icon-behance {
+    background-image: url(../img/icons/behance-outline.svg);
+    background-repeat: no-repeat;
+    height: 3rem;
+    margin: 14px 16px;
+    &:hover {
+      background-image: url(../img/icons/behance-square-black.svg);
+    }
+  }
+  .social-icon-linked {
+    background-image: url(../img/icons/linkedin-outline.svg);
+    background-repeat: no-repeat;
+    height: 3rem;
+    margin: 14px 16px;
+    &:hover {
+      background-image: url(../img/icons/linkedin-black.svg);
+    }
+  }
+  .social-icon-insta {
+    background-image: url(../img/icons/instagram-outline.svg);
+    background-repeat: no-repeat;
+    height: 3rem;
+    margin: 14px 16px;
+    &:hover {
+      background-image: url(../img/icons/instagram-black.svg);
+    }
+  }

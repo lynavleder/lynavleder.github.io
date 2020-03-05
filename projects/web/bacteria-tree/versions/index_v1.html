@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bacteria Identification Tree</title>
+
+<!-- CSS Files -->
+<link type="text/css" href="css/base.css" rel="stylesheet" />
+<link type="text/css" href="css/Spacetree.css" rel="stylesheet" />
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+<link href="https://fonts.googleapis.com/css?family=Domine|Open+Sans&display=swap" rel="stylesheet"> 
+
+<!--[if IE]><script language="javascript" type="text/javascript" src="../../Extras/excanvas.js"></script><![endif]-->
+
+<!-- jQuery -->
+<script language="javascript" type="text/javascript" src="vendor/jquery-3.4.1.min.js"></script>
+<!-- jQuery UI -->
+<script language="javascript" type="text/javascript" src="vendor/jquery-ui.min.js"></script>
+<!-- JIT Library File -->
+<script language="javascript" type="text/javascript" src="js/jit.js"></script>
+
+<!-- Example File -->
+<script language="javascript" type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body onload="init();">
+<div id="container">
+
+<!-- <div id="left-container">
+    <div class="text">
+    <h4>Bacteria Identification Tree</h4> 
+    </div>
+    <div id="id-list"></div>      
+</div> -->
+
+<div id="center-container">
+    <div id="infovis"></div>    
+</div>
+
+<div id="right-container">
+
+    <h3>Select Case Study</h3>
+
+    <h3 id="case-alert">Please select a case study to begin.</h3>
+
+    <button id="welcome">Getting Started</button>
+
+    <div class="caseNumbers">
+        <button id="caseOne">One</button>
+        <button id="caseTwo">Two</button>
+        <button id="caseThree">Three</button>
+        <button id="caseFour">Four</button>
+        <button id="caseFive">Five</button>
+        <button id="caseSix">Six</button>
+        <button id="caseSeven">Seven</button>
+        <button id="caseEight">Eight</button>
+        <button id="caseNine">Nine</button>
+        <button id="caseTen">Ten</button>
+        <button id="caseEleven">Eleven</button>
+        <button id="caseTwelve">Twelve</button>
+        <button id="caseThirteen">Thirteen</button>
+        <button id="caseFourteen">Fourteen</button>
+        <button id="caseFifteen">Fifteen</button>               
+    </div>
+
+    <div class="modal">
+        <a href="#" id="thelink">Open Case Study Information</a>
+    </div>
+
+    <h3>Tree Orientation</h3>
+    <div class="orientation">
+        <div>
+            <label for="r-top">Top </label>
+            <input type="radio" id="r-top" name="orientation" checked="checked" value="top" />
+        </div>
+        <div>
+            <label for="r-left">Left </label>
+            <input type="radio" id="r-left" name="orientation" value="left" />
+        </div>
+        <div>
+            <label for="r-bottom">Bottom </label>
+            <input type="radio" id="r-bottom" name="orientation"value="bottom" />
+        </div>
+        <div>
+            <label for="r-right">Right </label>
+            <input type="radio" id="r-right" name="orientation" value="right" />
+        </div>
+    </div>
+
+    <div class="selection">
+        <div>
+            <label for="s-normal">Normal </label>
+            <input type="radio" id="s-normal" name="selection" checked="checked" value="normal" /> 
+        </div>
+        <div>
+            <label for="s-root">Set as Root </label>
+            <input type="radio" id="s-root" name="selection" value="root" />
+        </div>
+    </div>
+
+</div>
+
+<div id="log"></div>
+</div>
+
+<!-- Welcome Modal -->
+<div class="dialog" id="welcome-modal" title="Welcome">
+    <h2>Bacterial Taxonomy<br> Learning Tree</h3>
+    <p>This tree will involve the identification of some important bacterial species based on a number of characteristics. All of the bacteria included in this tree are from the Domain Bacteria and further information to assist you may be found in Chapter 11 of textbook (Microbiology: An Introduction, Tortora et al., 10th edition). You may also wish to use online sources or the Colour Atlas that is included in your course package (A Photographic Atlas for the Microbiology Laboratory, Leboffe & Pierce, 3rd edition) to assist you.</p>
+    <p>To complete a part of the tree and identify the bacterial species please read the corresponding case study. Using clues from the case study and information from images provided as well as the other sources identified above, you should be able to deduce the bacterium of interest.</p>
+    <p class="emphasis">Please select a case study to the right to begin. &rArr;</p>
+</div>
+
+<!-- Case Study Dialog Boxes -->
+<div class="dialog" id="box-one" title="Case Study #1">
+    <p>This bacterium is responsible for causing a number of infections ranging from skin infections, to endocarditis, food poisoning, surgical infections, and toxic shock poisining. A gram stain of the bacterium is shown below. When H202 is added to a colony of this species on an agar plate, bubbles form. This bacterium produces a yellow pigment and turns the media yellow when grown on an mannitol salt agar plate. This species is in the Phylum Firmicutes and coonies produce a golden coloured pigment on nutrient agar plates.</p>
+    <figure>
+        <img src="img/Staphylococcus-aureus.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 1. Gram stain of bacterial species presented in case study #1.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-two" title="Case Study #2">
+    <p>This bacterium causes scarlet fever, rheumatic fever, pharyngitis, and necrotizing fasciitis. When grown on Sheeps Blood agar this bacteria produces a zone of clearing due to the production of a hemolysin (Figure 2). The bacterium is classified as Group A because of the antigenic group A found on the cell surface. This bacterium is also in the Phylum Firmicutes. When H2O2 is added to a colony of this species on an agar plate, bubbles do not form. The microscopic arrangement of this species is considered to be chains. This species stains purple following a gram stain procedure and is circular-shaped.</p>
+    <figure>
+        <img src="img/Strepococcus-pyogenes.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 2. Bacterial species presented in case study #2 on Sheep's Bloog agar.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-three" title="Case Study #3">
+    <p>This bacterial species causes the disease known as anthrax. It is commonly found in the soil and is a non-motile facultative anaerobe. This bacterium is also in the Phylum Firmicutes. When gram-stained this bacillus appears purple. When older cultures of this species are stained with malachite reen, a green circuler body can be visualized.</p>
+    <figure>
+        <img src="img/Bacillus-anthracis.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 3. Bacterial species presented in case study #3 stained with malachite green.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-four" title="Case Study #4">
+    <p>This bacterium is a common commensal organism. It ferments sugars and produces lactic acid which gives it a competitive advantage and allows it to colonize a number of sites in the human body. It is also used commercially to produce foods such as sauerkraut and yogurt. Although this genus lacks cytochrome c, they are aerotolerant. This bacterial species also belongs to the Phylum Firmicutes. A gram stain of this specis can be found in Figure 4.</p>
+    <figure>
+        <img src="img/Lactobacillus-acidophilus.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 4. Gram stain of bacterial species presented in case study #4.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-five" title="Case Study #5">
+    <p>This bacterium is classified as a member of the Phylum Actinobacteria. It is commonly isolated from soil and is filamentous. It grows in the presence of oxygen. This organism does not cause disease, and in fact, aids in the treatment of bacterial diseases due to its ability to produce multiple antibiotics (Figure 5). The genome of this species has been sequenced and it has been found that this organism produces 2/3 of all natural antibiotics used in medicine and over 9,000 bioactive species.</p>
+    <figure>
+        <img src="img/Streptomyces-coelicolor.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 5. The secretion of the antibiotic actinorhodin by the bacterium presented in case study #5.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-six" title="Case Study #6">
+    <p>This bacterium is also a member of the Phylum Actinobacteria. It can be isolated from soil and is filamentous. This organism is the cause of a deisease sometimes referred to as consumption. The cell wall of this organism is resistant to many chemical and its unique structure can be vizualized by staining with carbolfuchsin dye, which makes them appear red (Figure 6). This organism must be grown in a special media and colonies appear after a few weeks when plated. This bacterium grows only in the presence of oxygen.</p>
+    <figure>
+        <img src="img/Mycobacterium-tuberculosis.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 6. Carbolfuchsin staining of the bacterial species outlined in case study #6.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-seven" title="Case Study #7">
+    <p>A gram stain of this organism is shown in Figure 7. This organism is one of the causative agents of the disease menengitis. It inhabits the mucous membranes of mammals by using the pili present on the cell surface to attach. It produces capsule, which is important in cirulence and there are 5 capsular stereotypes of which the vaccines are based. Diagnostic testing involves growth on chocolate agar. All clinically relevant species pproduces a pruple reaction when exposed to oxidase reagent. This particular species produces a yellow reaction when grown in the presence of glucose. This bacterium is classified under the Class Betaproteobacteria.</p>
+    <figure>
+        <img src="img/Neiserria-meningitidis.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 7. Gram stain of bacterial species presented in case study #7.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-eight" title="Case Study #8">
+    <p>This agriculturally important bacterium is grouped with other bacterial species in the class of bacteria that generally require very little nutrients for growth. This organism does not cause disease in humans, rather it is known for its ability to infect the roots of leguminous plants. This, however, is not an infection, but a symbiotic relationship whereby the bacterium fixes nitrogen for use by the plant. This bacilli-shaped bacterial species stains pink when gram-stained.</p>
+    <figure>
+        <img src="img/Rhizobium-leguminosarum.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 8. Early stages of symbiotic nodule development in the pea by the bacterium presented in case study #8.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-nine" title="Case Study #9">
+    <p>This bacterium is also classified under the class of bacteria that generally require little nutrients for growth. Gram stain results for this speies are shown in Figure 9. This obligate parasite is the causative agent of the disease brucellosis. Its ability to survive phagocytosis enhances its ability to cause disease and avoid clearance by the host. This bacterium can be easily cultured from the blood of an infected individual. This species does not produce a flagella. When H2O2 is added to a plate culture, bubbles are produced.</p>
+    <figure>
+        <img src="img/Brucella-melitensis.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 9. Gram stain of coccobacillus shaped bacterium described in case study #9.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-ten" title="Case Study #10">
+    <p>This bacterium is found in the class of bacteria that are capable of using hydrogen gas, ammonia, and methane as substrates. When gram stained this organism is pink and bacillus-shaped. It does not produce a flagella. This bacterium is a causative agent of whooping cough. The pathogenicity is mediated by the production of an A-B type of a protein which acts to ADP ribosylate G proteins with blocks inhibition of adenylate cyclase in susceptible cells.</p>
+    <figure>
+        <img src="img/Bordatella-pertussis.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 10. 3-D crystal structure of a protein produced by the bacteria described in case study #10 that is responsible for its pathogenicity.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-eleven" title="Case Study #11">
+    <p>This bacterium is grouped in the largest subgroup of proteobacteria. It has an ability to utilize a wide variety of substrates. It persists in the environment and for this reason, it is often found on surfaces and in the water supply of hospitals, where it is one of the most common causes of nosocomial infections of the skin, wounds, burns, catheters, and cystic fibrosis patients. When gram stained this bacillus appears pink. This bacterium moves by a polar tuft of flagella. It is aerobic and therefore, produces a positive result when exposed to the oxidase reagent. It produces a yellow colour when grown in the presence of glucose and a blue colour when grown in Simmon's citrate agar. This organism is capable of biofilm formation, which makes it extremely resistant to antibiotics and therefore difficult to treat.</p>
+    <figure>
+        <img src="img/Pseudomonas-aeruginosa.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 11. Formation of a biofilm by the bacterium presented in case study #11.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-twelve" title="Case Study #12">
+    <p>This bacterium is grouped in the largest subgroup of proteobacteria. It is found in the intestinal tract of humans and does not usually cause disease, however, some strains are pathogenic causing urinary tract infections and diarrhea. When gram stained this bacterium appears pink and is a short bacillus. It produces paritrichous flagella. The reaction produced when this organism is grown on macConkey agar is shown in Figure 12. When grown in a glucose tube, it produces a yellow colour and a large gas bubble. The production of gas indicates it can grow under limited oxygen. When plated on Simmon's citrate agar the media is green.</p>
+    <figure>
+        <img src="img/Escherichia-coli.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 12. Results for the bacterial species presented in case study #12 grown on MacConkey agar.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-thirteen" title="Case Study #13">
+    <p>This bacterium is grouped in the largest subgroup of proteobacteria. This bacterial species is a common cause of food poisoning. It inhabits the intestinal tract of many animals and can therefore contaminate meat and eggs. A gram stain of this organism is shwon in Figure 13. This organism produces a flagella. It can grow without oxygen. When plated on MacConkey agar it produces a pale purple/pink colour. When plated on Simmon's citrate agar the media is blue. When grown on a specific medium, it can produce a black precipitate.</p>
+    <figure>
+        <img src="img/Salmonella-typhimurium.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 13. Gram stain results for the bacterial species presented in case study #13.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-fourteen" title="Case Study #14">
+    <p>This bacterial species is grouped with other bacterial predators. It does not cause disease in animals. The bacillus appears pink when gram stained. The organism moves by gliding, leaving behind a slime layer. Once it encounters bacteria, it enzymatically digests them. This bacterium exhibits a complex life cycle; when nutrients are available the organism swarms and engulfs other bacteria, but when nutrients are low the bacterium aggregates and forms fruiting bodies containing spores which will germinate once conditions become favourable again. The fruiting body of this bacterium is shown in Figure 14.</p>
+    <figure>
+        <img src="img/Myxococcus-xanthus.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 14. A fruiting body containing spores produced by the bacerium described in case study #14.</p>
+    </figure>
+</div>
+
+<div class="dialog" id="box-fifteen" title="Case Study #15">
+    <p>This microaerophilic bacterium is the cause of peptic ulcers and stomach cancer. The bacillus has a helical shape and is pink when gram stained. It is classified in the group of proteobacteria that are typically helical or curved. The flagella produced by this organism is shown in Figure 15. This organism produces bubbles when H2O2 is added. In the presence of urea, this organism produces a pink colour reaction.</p>
+    <figure>
+        <img src="img/Helicobacter-pylori.jpg" alt="Gram stain of bacteria">
+        <p class="subtitle">Figure 15. Type of flagella produced by the bacterial species outlined in case study #15.</p>
+    </figure>
+</div>
+
+<!-- Answer + Incorrect Modals -->
+<div id="dialog-box-answer" title="Correct">
+    <p>Congratulations!</p>
+    <a href="index.html">Start Over</a>
+</div>
+
+<div id="dialog-box-incorrect" title="Incorrect">
+    <p>Sorry, that isn't the right answer.</p>
+    <a href="index.html">Start Over</a>
+</div>
+
+</body>
+</html>

@@ -1,25 +1,51 @@
+.card-container {
+    &.graphics-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 5%;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
 #graphics-card-01 {
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 2 / 3;
+    grid-row: 2;
 }
 #graphics-card-02 {
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 3;
+    grid-row: 1;
 }
 #graphics-card-03 {
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 1;
+    grid-row: 2;
 }
 #graphics-card-04 {
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 1 / span 2;
+    grid-row: 1;
 }
 #graphics-card-05 {
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.h3-graphics {
+    position: absolute;
+    top: -20%;
 }

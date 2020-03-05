@@ -1,3 +1,15 @@
+.card-container {
+    &.web-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 5%;
+        color: #444;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
 #web-card-01 {
     background-image: url(../img/bacteria-tree.JPG);
     background-repeat: no-repeat;
@@ -12,4 +24,8 @@
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.h3-web {
+    position: absolute;
+    top: -20%;
 }
