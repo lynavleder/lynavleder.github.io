@@ -7,8 +7,8 @@
 @import 'queries';
 @import 'graphics';
 @import 'web';
+@import 'logos';
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Nunito+Sans:400,700,900&display=swap');
-
 
 // GENERAL STYLES ==========
 
@@ -16,14 +16,37 @@ html {
   overflow-x: hidden;
 }
 
-body:not(.navbar):not(.footer-bottom) {
+html:not(.navbar):not(.footer-bottom) {
     font-family: $body-font;
     font-weight: normal;
     color: $primary-color;
     background-color: #fff;
     margin: 0 auto;
     min-width: 330px;
-    // background-image: url(../img/pattern/memphis-colorful.png);
+    background: url(../img/pattern/memphis-colorful.png) repeat;
+}
+
+// Dark Mode
+$bg-light: url('../img/pattern/memphis-colorful.png') repeat;
+$bg-dark: url('../img/pattern/memphis-colorful-dark.png') repeat !important;
+
+html[data-theme='dark'] {
+//   background: var($bg-dark);
+  transition: all 0.2s ease;
+  background: $bg-dark;
+  color: $primary-light;
+}
+html[data-theme='light'] {
+  transition: all 0.2s ease;
+  background: $bg-light;
+}
+.content-wrapper[data-theme='light'] {
+  color: $primary-color;
+  background-color: $primary-light;
+}
+.content-wrapper[data-theme='dark'] {
+  color: $primary-light;
+  background-color: $primary-color;
 }
 
 .button {
@@ -94,13 +117,13 @@ a.button, #myNavbar, .submit-button {
 
 // BODY ==========
 body {
-  background-image: url(../img/pattern/memphis-colorful.png);
+  // background-image: url(../img/pattern/memphis-colorful.png);
 }
 #title-01 {
-  color: $lblue
+  color: $primary-color
 }
 #title-02 {
-  color: $dblue;
+  color: $primary-color;
 }
 .content-wrapper {
   background-color: white;

@@ -2,9 +2,10 @@
 $body-font: 'Merriweather', serif;
 $headings-font: 'Nunito Sans', sans-serif;
 $primary-color: #333;
-$dblue: #1b365d;
-$lblue: #006ba6;
-$orange: #ef6534;
+$primary-light: #f5f5f5;
+// $img-path: "/img/pattern/";
+// $bg-light: url(#{$img-path}/memphis-colorful.png) repeat-x;
+// $bg-dark: url(#{$img-path}/memphis-colorful-dark.png) repeat-x;
 $lgrey: #75787b;
 
 // TYPOGRAPHIC SCALE
@@ -13,7 +14,7 @@ $root: (
   lineHeight: 27px
 );
 $base-font-size: 18px;
-$base-line-height: 1.5rem;
+$base-line-height: 1.5rem; 
 
 $type-settings: (
     -1: (

@@ -13,10 +13,7 @@
 
   <link rel="stylesheet" href="../../../css/normalize.css">
   <link rel="stylesheet" href="../../../css/main.css">
-  <link rel="stylesheet" href="../../../css/slick.css">
-  <link rel="stylesheet" href="../../../css/slick-theme.css">
-  <link rel="stylesheet" href="../../../css/animate.min.css">
-
+  <link rel="stylesheet" href="../../../css/grid-gallery.min.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -42,9 +39,20 @@
           <!-- <button>more</button> -->
     </div>
   </div>
-
+    <!-- Lightbox -->
+    <div class="gg-container">
+      <div class="gg-box">
+        <img src="../../../img/lg/banners/COMP272_banner-01.jpg" alt="code">
+        <img src="../../../img/lg/banners/COMP314_banner.jpg" alt="code">
+        <img src="../../../img/lg/banners/COMP361_banner-01.jpg" alt="code">
+        <img src="../../../img/lg/banners/COMP361_banner-01.jpg" alt="code">
+        <img src="../../../img/lg/banners/COMP361_banner-01.jpg" alt="code">
+        <img src="../../../img/lg/banners/COMP361_banner-01.jpg" alt="code">
+        <img src="../../../img/lg/banners/COMP361_banner-01.jpg" alt="code">
+      </div>
+    </div>
     <!-- Image Slider -->
-    <div class="img-slider">
+    <!-- <div class="img-slider">
       <div>
           <img src="../../../img/lg/banners/COMP272_banner-01.jpg" alt="code">
           <h3>COMP 000</h3>
@@ -90,7 +98,7 @@
           <h3>COMP 000</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ratione doloremque nobis ab, enim similique? Ab debitis quibusdam, assumenda pariatur repudiandae ut harum sequi, id laudantium officia ad eligendi provident?</p>
       </div>
-  </div>
+  </div> -->
 
   <footer></footer>
 
@@ -99,7 +107,17 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="../../../js/plugins.js"></script>
   <script src="../../../js/main.js"></script>
-  <script type="text/javascript" src="../../../js/vendor/slick.min.js"></script>
+  <script type="text/javascript" src="../../../js/vendor/grid-gallery.min.js"></script>
+  <script>
+    gridGallery({
+      selector: ".gg-container",
+      darkMode: false,
+      layout: "horizontal",
+      gaplength: 8,
+      rowHeight: 120,
+      columnWidth: 200
+    });
+</script>
 
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

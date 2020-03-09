@@ -100,6 +100,18 @@
   <script src="../../../js/plugins.js"></script>
   <script src="../../../js/main.js"></script>
   <script type="text/javascript" src="../../../js/vendor/slick.min.js"></script>
+  <script>
+      // Image Slider
+      $(document).ready(function(){
+          $('.img-slider').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true
+        });
+      });
+  </script>
   
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
