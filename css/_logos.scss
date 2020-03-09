@@ -1,0 +1,12 @@
+.gg-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.gg-box > img {
+    border-radius: 5px;
+    &:hover {
+        transform: scale(1.02);
+    }
+        transition: all 0.3s;
+}

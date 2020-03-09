@@ -308,66 +308,6 @@ p {
   border-radius: 50%;
 }
 
-form {
-  text-align: left;
-}
-
-label {
-  display: block;
-  padding-top: 50px;
-  text-align: left;
-}
-
-.label-text {
-  color: #fff;
-  cursor: text;
-  font-size: 1rem;
-  line-height: 20px;
-  transform: translateY(-34px);
-  transition: all 0.3s;
-}
-
-input {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 2px solid #fff;
-  color: #fff;
-  font-size: 1rem;
-  outline: 0;
-  padding: 5px 20px;
-  text-align: left;
-  transition: all 0.3s;
-  width: 80%;
-}
-input:focus {
-  max-width: 100%;
-  width: 90%;
-}
-input:focus + .label-text {
-  color: #fff;
-  font-size: 0.8rem;
-  transform: translateY(-65px);
-}
-input:valid + .label-text {
-  font-size: 0.8rem;
-  transform: translateY(-65px);
-}
-
-.submit-button {
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-  width: 100%;
-}
-.submit-button:hover {
-  color: #fff;
-  cursor: pointer;
-  background-color: black;
-}
-
 .portfolio-card {
   position: relative;
   height: 200px;
@@ -527,12 +467,14 @@ p {
 
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
-  background-color: #000;
+  background-color: #333;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
   z-index: 100;
   /* Change the color of links on hover */
   /* Add a background color to the active link */
@@ -551,10 +493,10 @@ p {
 .navbar a:hover:not(.social-icon-behance):not(.social-icon-linked):not(.social-icon-insta),
 .navbar a:focus:not(.social-icon-behance):not(.social-icon-linked):not(.social-icon-insta) {
   background-color: #fff;
-  color: #1b365d;
+  color: #333;
 }
 .navbar a.active {
-  background-color: #ef6534;
+  background-color: #333;
   color: #fff;
 }
 .navbar .icon {
@@ -602,6 +544,64 @@ p {
 }
 .social-icon-insta:hover {
   background-image: url(../img/icons/instagram-black.svg);
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -200px;
+  width: 60px;
+  height: 30px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  color: #fff;
+  position: relative;
+  margin-left: 175px;
+}
+
+label:after {
+  content: "";
+  background: #333;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
+}
+
+input:checked + label {
+  background: #cddee7;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 420ms !important;
+  transition-delay: 0.125s !important;
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
@@ -721,17 +721,52 @@ p {
   top: -20%;
 }
 
+.gg-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.gg-box > img {
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.gg-box > img:hover {
+  transform: scale(1.02);
+}
+
 html {
   overflow-x: hidden;
 }
 
-body:not(.navbar):not(.footer-bottom) {
+html:not(.navbar):not(.footer-bottom) {
   font-family: "Merriweather", serif;
   font-weight: normal;
   color: #333;
   background-color: #fff;
   margin: 0 auto;
   min-width: 330px;
+  background: url(../img/pattern/memphis-colorful.png) repeat;
+}
+
+html[data-theme=dark] {
+  transition: all 0.2s ease;
+  background: url("../img/pattern/memphis-colorful-dark.png") repeat !important;
+  color: #f5f5f5;
+}
+
+html[data-theme=light] {
+  transition: all 0.2s ease;
+  background: url("../img/pattern/memphis-colorful.png") repeat;
+}
+
+.content-wrapper[data-theme=light] {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.content-wrapper[data-theme=dark] {
+  color: #f5f5f5;
+  background-color: #333;
 }
 
 .button {
@@ -763,16 +798,12 @@ a.button, #myNavbar, .submit-button {
   width: 10%;
 }
 
-body {
-  background-image: url(../img/pattern/memphis-colorful.png);
-}
-
 #title-01 {
-  color: #006ba6;
+  color: #333;
 }
 
 #title-02 {
-  color: #1b365d;
+  color: #333;
 }
 
 .content-wrapper {

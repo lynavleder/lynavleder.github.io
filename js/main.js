@@ -8,31 +8,32 @@ function myFunction() {
   } 
 
   // Image Slider
-$(document).ready(function(){
-    $('.img-slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    adaptiveHeight: true
-  });
-});
-
-
 // $(document).ready(function(){
-//   $('.slider-for').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: '.slider-nav'
-//   });
-//   $('.slider-nav').slick({
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: '.slider-for',
+//     $('.img-slider').slick({
 //     dots: true,
-//     centerMode: true,
-//     focusOnSelect: true
+//     infinite: true,
+//     speed: 300,
+//     slidesToShow: 1,
+//     adaptiveHeight: true
 //   });
 // });
+
+// Dark Mode
+var checkbox = document.querySelector('input[name=mode]');
+
+checkbox.addEventListener('change', function() {
+    if(this.checked) {
+        document.documentElement.style.transition="all 2s ease";
+        document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+        trans()
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+    }, 1000)
+}
