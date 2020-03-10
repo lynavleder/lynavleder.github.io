@@ -300,12 +300,23 @@ footer {
 // BREAKPOINTS ==========
  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
  @media screen and (max-width: 600px) {
+   h1 {
+     font-size:2.61111111rem;
+     line-height: 3.5rem;
+   }
    h2 {
      line-height: 3.5rem;
+   }
+   h3 {
+     line-height: 1.5;
+   }
+   .h3-portfolio {
+     top: -26%;
    }
    .square-header {
      top: -32%;
    }
+  //  NAVBAR
   .navbar a:not(:first-child), #switch {display: none;}
   .navbar {
     display: flex;
@@ -319,7 +330,7 @@ footer {
     display: block;
   }
   body:not(.navbar) {
-    max-width: 311px;
+    min-width: 311px;
     margin: 0 auto;
   }
   .social {
@@ -329,6 +340,7 @@ footer {
       padding: 0;
     }
   }
+  // BODY
   .content-wrapper {
     width: 90%;
     top: 0;
@@ -350,18 +362,43 @@ footer {
       text-align: center;
     }
   }
+  .card-wrapper {
+    width: 100%;
+  }
   .card-wrapper.portfolio-wrapper {
     width: 90%;
-    height: 18rem;
+    height: 20rem;
+    margin-bottom: 7rem;
   }
+  // PORTFOLIO
   #border-portfolio {
-    height: 18rem;
+    height: 20rem;
   }
   body > div.card-container-portfolio {
     width: 90%;
   }
   #card01, #card02 {
     margin: 2rem auto;
+  }
+  // ABOUT
+  body > div.card-wrapper.contact-wrapper {
+    width: 100%;
+  }
+  .portrait {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+  // Lightbox Gallery
+  .gg-container {
+    width: 100%;
+  }
+  // Slick-slider
+  .img-slider {
+    width: 100%;
   }
 }
 
