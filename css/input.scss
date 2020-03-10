@@ -354,7 +354,6 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    
     a {
       margin: 1rem;
     }
@@ -429,13 +428,33 @@ footer {
 
 
 @media screen and (min-width:600px) {
-  
+  .header-box > a:nth-child(2) {
+    margin: 1rem;
+  }
+  div.header-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    a {
+      margin: 1rem;
+    }
+    .subtitle {
+      text-align: center;
+    }
+  }
 }  
 
 @media screen and (min-width:768px) {
-  
-}  
-
+  div.header-box {
+    a {
+      width: 50%; 
+      margin: 1rem auto;
+    }
+    a:nth-child(2) {
+      margin: 1rem auto;
+    }
+  }
+}
 @media screen and (min-width:992px) {
   
 }  

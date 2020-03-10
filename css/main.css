@@ -1105,5 +1105,31 @@ footer form input .submit-button {
     width: 100%;
   }
 }
+@media screen and (min-width: 600px) {
+  .header-box > a:nth-child(2) {
+    margin: 1rem;
+  }
+
+  div.header-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  div.header-box a {
+    margin: 1rem;
+  }
+  div.header-box .subtitle {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  div.header-box a {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  div.header-box a:nth-child(2) {
+    margin: 1rem auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
