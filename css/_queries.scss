@@ -2,7 +2,7 @@
  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
  @media screen and (max-width: 600px) {
     .navbar a:not(:first-child) {display: none;}
-    .navbar a.icon {
+    .navbar a.icon, #switch {
       float: right;
       display: block;
     }
@@ -14,17 +14,18 @@
   
   /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
-    .navbar.responsive a.icon {
+    .navbar.responsive a.icon, #switch {
       position: absolute;
       right: 0;
       bottom: 0;
     }
-    .navbar.responsive a {
+    .navbar.responsive a, #switch {
       float: none;
       display: block;
       text-align: left;
     }
   } 
+
 
   @media screen and (min-width:600px) {
     

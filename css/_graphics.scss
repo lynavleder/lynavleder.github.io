@@ -13,7 +13,7 @@
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    grid-column: 2/3;
+    grid-column: 1/ span 2;
     grid-row: 2;
 }
 #graphics-card-02 {
@@ -22,6 +22,7 @@
     background-size: cover;
     grid-column: 3;
     grid-row: 1;
+    visibility: hidden;
 }
 #graphics-card-03 {
     background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
@@ -29,20 +30,22 @@
     background-size: cover;
     grid-column: 1;
     grid-row: 2;
+    visibility: hidden;
 }
 #graphics-card-04 {
-    background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+    background-image: url(../img/graphic-design/banner-01.png);
     background-repeat: no-repeat;
     background-size: cover;
-    grid-column: 1 / span 2;
+    grid-column: 1/ span 2;
     grid-row: 1;
 }
 #graphics-card-05 {
-    background-image: url(../img/lg/banners/COMP674_banner-01.jpg);
+    background-image: url(../img/graphic-design/banner-01.png);
     background-repeat: no-repeat;
     background-size: cover;
     grid-column: 3;
     grid-row: 2;
+    visibility: hidden;
 }
 
 .h3-graphics {

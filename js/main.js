@@ -24,10 +24,12 @@ var checkbox = document.querySelector('input[name=mode]');
 checkbox.addEventListener('change', function() {
     if(this.checked) {
         document.documentElement.style.transition="all 2s ease";
-        document.documentElement.setAttribute('data-theme', 'dark')
+        document.documentElement.setAttribute('data-theme', 'dark');
+        $(".content-wrapper").css('background-color', '#333');
     } else {
         trans()
         document.documentElement.setAttribute('data-theme', 'light')
+        $(".content-wrapper").css('background-color', 'mintcream');
     }
 })
 
